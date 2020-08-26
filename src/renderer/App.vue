@@ -6,8 +6,8 @@
 
 <script>
   export default {
-    name: 'open-dudu2'
-  }
+      name: "open-dudu2"
+  };
 </script>
 
 <style>
