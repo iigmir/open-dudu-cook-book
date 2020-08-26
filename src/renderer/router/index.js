@@ -8,11 +8,16 @@ export default new Router({
         {
             path: "/",
             name: "landing-page",
-            component: require("@/components/LandingPage").default
+            component: require("@/views/LandingPage/index.vue").default
         },
         {
             path: "*",
             redirect: "/"
+        },
+        {
+            path: "/app",
+            name: "app",
+            component: require("@/views/App/index.vue").default
         }
     ]
 });
