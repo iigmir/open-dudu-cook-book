@@ -4,7 +4,7 @@
     <main>
       <div class="left-side">
         <span class="title">
-          Welcome to your new project!
+          Welcome to your <router-link to="/app">new project</router-link>!
         </span>
         <system-information></system-information>
       </div>
