@@ -88,6 +88,10 @@ let webConfig = {
             name: 'fonts/[name].[ext]'
           }
         }
+      },
+      {
+        test: /\.xml$/,
+        loader: 'xml-loader'
       }
     ]
   },

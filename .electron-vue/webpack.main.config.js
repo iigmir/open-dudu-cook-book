@@ -36,6 +36,10 @@ let mainConfig = {
       {
         test: /\.node$/,
         use: 'node-loader'
+      },
+      {
+        test: /\.xml$/,
+        loader: 'xml-loader'
       }
     ]
   },

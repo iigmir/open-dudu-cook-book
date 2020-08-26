@@ -112,6 +112,10 @@ let rendererConfig = {
             name: 'fonts/[name]--[folder].[ext]'
           }
         }
+      },
+      {
+        test: /\.xml$/,
+        loader: 'xml-loader'
       }
     ]
   },
