@@ -16,7 +16,7 @@
 
 <script>
 import SystemInformation from "./SystemInformation.vue";
-import Menu from "../../components/Menu/index.vue";
+import Menu from "../Menu/index.vue";
 
 export default {
     name: "landing-page",
