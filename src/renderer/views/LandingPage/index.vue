@@ -5,7 +5,7 @@
                 <Menu />
             </div>
             <div class="column">
-                Second column
+                <RecipesList />
             </div>
             <div class="column">
                 Third column
@@ -15,13 +15,14 @@
 </template>
 
 <script>
-import SystemInformation from "./SystemInformation.vue";
 import Menu from "../Menu/index.vue";
+import RecipesList from "../RecipesList/index.vue";
 
 export default {
     name: "landing-page",
     components: {
-        Menu
+        Menu,
+        RecipesList
     },
     methods: {
         open (link) {

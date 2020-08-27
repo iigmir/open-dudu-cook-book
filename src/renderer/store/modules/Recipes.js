@@ -16,7 +16,7 @@ const getters = {
         return state.default_src.allsource.record;
     },
     default_theme_getter(state) {
-        return state.default_theme.alltheme.record;
+        return state.default_theme.alltheme.theme;
     }
 };
 

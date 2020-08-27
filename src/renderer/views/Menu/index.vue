@@ -73,15 +73,16 @@ export default {
         emit_from_card(input = { component: "", data: "" }) {
             switch (input.component) {
             case "Group":
-                this.group_action(input.data);
+                this.group_action(input);
                 break;
             default:
+                console.log(input);
                 break;
             }
         },
-        group_action(input = "") {
-            this.SET_sorted_type("Group");
-            this.SET_sorted_tag(input);
+        group_action(input = { component: "", data: "" }) {
+            this.SET_sorted_type(input.component);
+            this.SET_sorted_tag(input.data);
         }
     },
 };

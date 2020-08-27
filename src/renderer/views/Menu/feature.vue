@@ -21,7 +21,7 @@
 
 <script>
 import emits from "./child-emits.js";
-import { mapState } from "vuex";
+import { mapState, mapGetters } from "vuex";
 
 export default {
     name: "Feature",
@@ -30,11 +30,11 @@ export default {
         idx: -1,
     }),
     computed: {
-        ...mapState({
-            default_theme: state => state.Recipes.default_theme
-        }),
+        ...mapGetters("Recipes", [
+            "default_theme_getter"
+        ]),
         themes() {
-            return this.default_theme.alltheme.theme;
+            return this.default_theme_getter;
         },
         current_theme() {
             return this.idx < 0 ? {} : this.themes[this.idx];
