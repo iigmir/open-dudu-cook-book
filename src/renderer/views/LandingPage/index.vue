@@ -1,14 +1,14 @@
 <template>
-    <main>
+    <main class="container is-fluid">
         <Navigator />
         <div class="full columns">
-            <div class="column">
+            <div class="column scroll">
                 <Menu />
             </div>
             <div class="column scroll">
                 <RecipesList />
             </div>
-            <div class="column">
+            <div class="column scroll">
                 Third column
             </div>
         </div>
@@ -49,7 +49,10 @@ body {
     height: 100vh;
 }
 
-body > *,
+body > * {
+    height: 98%;
+}
+
 main {
     height: 100%;
 }

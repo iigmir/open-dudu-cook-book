@@ -34,6 +34,12 @@ export default {
     },
     computed: {
         ...mapGetters( "RecipeFlag", [ "sorted_type_getter", ]),
+        example_list() {
+            return [
+                { name: "X", child: ["4,1","1,1","1"] },
+                { name: "Y", child: ["4,1,1","1,1,2"] }
+            ];
+        },
         by_group_list() {
             if( this.sorted_type_getter === "Group" ) {
                 return this.group_labels_from_module;
@@ -46,10 +52,7 @@ export default {
                 // console.log(this.group_final_list);
                 return this.group_final_list;
             default:
-                return [
-                    { name: "X", child: ["4,1","1,1","1"] },
-                    { name: "Y", child: ["4,1,1","1,1"] }
-                ];
+                return [];
             }
             
         }

@@ -14,10 +14,5 @@ export default new Router({
             path: "*",
             redirect: "/"
         },
-        {
-            path: "/app",
-            name: "app",
-            component: require("@/views/App/index.vue").default
-        }
     ]
 });
