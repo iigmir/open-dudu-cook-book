@@ -1,4 +1,6 @@
-# open-dudu-cook-book
+# open-dudu-cook-book (ARCHIVED)
+
+(The development kit is totally outdated, therefore I archive it. New version will added later.)
 
 An electron-vue project that clones an abandonware called DuduCookBook.
 
