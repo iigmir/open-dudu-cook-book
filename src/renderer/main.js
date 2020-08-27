@@ -1,5 +1,4 @@
 import Vue from "vue";
-import axios from "axios";
 import Buefy from "buefy";
 import "buefy/dist/buefy.css";
 import { library } from "@fortawesome/fontawesome-svg-core";

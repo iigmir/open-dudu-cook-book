@@ -1,5 +1,14 @@
 <template>
-    <div>SM</div>
+    <div>
+        <b-field>
+            <b-input
+                placeholder="查詢菜名..."
+                type="search"
+                icon-pack="fas"
+                icon="search">
+            </b-input>
+        </b-field>
+    </div>
 </template>
 
 <script>
