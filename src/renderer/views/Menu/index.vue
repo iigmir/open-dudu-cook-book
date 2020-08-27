@@ -65,7 +65,7 @@ export default {
         };
     },
     methods: {
-        emit_from_card(input = {}) {
+        emit_from_card(input = { src_component: "", src_api: "" }) {
             console.log(input);
         }
     },
