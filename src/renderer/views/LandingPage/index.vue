@@ -1,10 +1,11 @@
 <template>
     <main>
+        <Navigator />
         <div class="full columns">
             <div class="column">
                 <Menu />
             </div>
-            <div class="column">
+            <div class="column scroll">
                 <RecipesList />
             </div>
             <div class="column">
@@ -17,12 +18,14 @@
 <script>
 import Menu from "../Menu/index.vue";
 import RecipesList from "../RecipesList/index.vue";
+import Navigator from "../../components/Navigator.vue";
 
 export default {
     name: "landing-page",
     components: {
         Menu,
-        RecipesList
+        RecipesList,
+        Navigator
     },
     methods: {
         open (link) {
@@ -43,9 +46,31 @@ export default {
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
+    height: 100vh;
 }
 
-.full.columns {
-    width: 100%;
+body > *,
+main {
+    height: 100%;
 }
+</style>
+
+<style scoped>
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main > .full.columns {
+    flex: 1;
+}
+
+.full.columns .scroll.column {
+    overflow-y: scroll;
+}
+
+/* .full.columns .column {
+    padding-bottom: 0;
+} */
 </style>

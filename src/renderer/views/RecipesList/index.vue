@@ -1,7 +1,5 @@
 <template>
     <b-menu>
-        {{ by_group_list }}
-        <span hidden>{{ group_children_list_from_module }}</span>
         <b-menu-list>
             <b-menu-item
                 v-for="(first_item, first_index) in final_list" v-bind:key="first_index"
@@ -11,8 +9,9 @@
                     <b-icon v-bind:icon="props.expanded ? 'caret-down' : 'caret-up'"></b-icon>
                 </template>
                 <b-menu-item
-                    v-for="(second_item, second_index) in first_item.child" v-bind:key="second_index"
-                    icon="map-marker" v-bind:label="second_item">
+                    v-for="(second_item, second_index) in first_item.child"
+                    v-bind:key="second_index"
+                    icon="map-marker" v-bind:label="second_item.name">
                 </b-menu-item>
             </b-menu-item>
         </b-menu-list>
@@ -44,6 +43,7 @@ export default {
         final_list() {
             switch (this.sorted_type_getter) {
             case "Group":
+                // console.log(this.group_final_list);
                 return this.group_final_list;
             default:
                 return [
