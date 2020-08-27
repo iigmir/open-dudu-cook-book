@@ -115,7 +115,12 @@ let rendererConfig = {
       },
       {
         test: /\.xml$/,
-        loader: 'xml-loader'
+        use: {
+          loader: 'xml-loader',
+          options: {
+            explicitArray: false,
+          },
+        },
       }
     ]
   },
