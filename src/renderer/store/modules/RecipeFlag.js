@@ -4,6 +4,18 @@ const state = {
     sorted_id: ""
 };
 
+const getters = {
+    sorted_type_getter(state) {
+        return state.sorted_type;
+    },
+    sorted_tag_getter(state) {
+        return state.sorted_tag;
+    },
+    sorted_id_getter(state) {
+        return state.sorted_id;
+    }
+};
+
 const mutations = {
     set_sorted_type(state, value = "") {
         state.sorted_type = value;
@@ -31,6 +43,7 @@ const actions = {
 export default {
     namespaced: true,
     state,
+    getters,
     mutations,
     actions
 };
