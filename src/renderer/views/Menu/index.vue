@@ -15,7 +15,7 @@
             </div>
             <div class="card-content">
                 <div class="content">
-                    {{ collapse.text }}
+                    <component v-bind:is="collapse.component" v-on:emit="emit_from_card"></component>
                 </div>
             </div>
         </b-collapse>
@@ -23,34 +23,52 @@
 </template>
 
 <script>
+import Group from "./group.vue";
+import Feature from "./feature.vue";
+import SearchMeal from "./search-meal.vue";
+import SearchFood from "./search-food.vue";
+import MealToday from "./today.vue";
+
 export default {
+    components: {
+        Group,
+        MealToday,
+        SearchMeal,
+        SearchFood,
+        Feature,
+    },
     data() {
         return {
             isOpen: 0,
             collapses: [
                 {
                     title: "分組顯示",
-                    text: "Text 1"
+                    component: "Group"
                 },
                 {
                     title: "今日餐桌",
-                    text: "Text 2"
+                    component: "MealToday"
                 },
                 {
                     title: "查詢菜名",
-                    text: "Text 3"
+                    component: "SearchMeal"
                 },
                 {
                     title: "查詢食材",
-                    text: "Text 3"
+                    component: "SearchFood"
                 },
                 {
                     title: "主題菜譜",
-                    text: "Text 3"
+                    component: "Feature"
                 }
             ]
         };
-    }
+    },
+    methods: {
+        emit_from_card(input = {}) {
+            console.log(input);
+        }
+    },
 };
 </script>
 
