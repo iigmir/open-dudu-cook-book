@@ -27,17 +27,17 @@ export default {
             if( !this.type_is_group ) {
                 return result;
             }
-            // const group_labels_from_module;
-            const other_group_children = this.default_list_getter.filter( it =>
-                it[this.sorted_tag_getter] === ""
+            const { default_list_getter, group_labels_from_module, other_label } = this;
+            const tag = this.sorted_tag_getter;
+            const named_labels = group_labels_from_module.filter( it => it !== this.other_label );
+            const no_group_children = default_list_getter.filter( the =>
+                named_labels.some( label => the[tag] === label ) === false
             );
-            this.group_list_from_module.forEach( name => {
-                result[ name ] = this.default_list_getter.filter(
-                    it => it[this.sorted_tag_getter] === name
-                );
+            group_labels_from_module.forEach( name => {
+                result[ name ] = default_list_getter.filter( it => it[tag] === name );
             });
-            if( other_group_children.length > 0 ) {
-                result[this.other_label] = result[this.other_label].concat(other_group_children);
+            if( no_group_children.length > 0 ) {
+                result[other_label] = result[other_label].concat(no_group_children);
             }
             return result;
         }

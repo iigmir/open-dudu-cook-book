@@ -1,9 +1,7 @@
 <template>
     <b-menu>
-        {{ group_list_from_module }}
-        <span hidden>{{
-            group_children_list_from_module
-        }}</span>
+        {{ by_group_list }}
+        <span hidden>{{ group_children_list_from_module }}</span>
         <b-menu-list>
             <b-menu-item
                 v-for="(first_item, first_index) in final_list" v-bind:key="first_index"
