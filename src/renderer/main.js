@@ -10,13 +10,15 @@ import router from "./router";
 import store from "./store";
 
 if (!process.env.IS_WEB) Vue.use(require("vue-electron"));
+
+// Fort Awesome
 library.add( faCaretDown, faCaretUp );
 Vue.component("vue-fontawesome", FontAwesomeIcon);
 Vue.use(Buefy, {
     defaultIconComponent: "vue-fontawesome",
     defaultIconPack: "fas",
 });
-Vue.http = Vue.prototype.$http = axios;
+
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */

@@ -5,16 +5,12 @@
             v-bind:key="index"
             v-bind:open="isOpen == index"
             v-on:open="isOpen = index">
-            <div
-                slot="trigger"
-                slot-scope="props"
-                class="card-header"
-                role="button">
+            <div class="card-header" slot="trigger" slot-scope="props" role="button">
                 <p class="card-header-title">
                     {{ collapse.title }}
                 </p>
                 <a class="card-header-icon">
-                    <b-icon pack="fas" :icon="props.open ? 'caret-down' : 'caret-up'"></b-icon>
+                    <b-icon v-bind:icon="props.open ? 'caret-down' : 'caret-up'"></b-icon>
                 </a>
             </div>
             <div class="card-content">
