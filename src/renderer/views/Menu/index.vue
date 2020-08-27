@@ -14,7 +14,7 @@
                     {{ collapse.title }}
                 </p>
                 <a class="card-header-icon">
-                    <b-icon :icon="props.open ? 'menu-down' : 'menu-up'"></b-icon>
+                    <b-icon pack="fas" :icon="props.open ? 'caret-down' : 'caret-up'"></b-icon>
                 </a>
             </div>
             <div class="card-content">
