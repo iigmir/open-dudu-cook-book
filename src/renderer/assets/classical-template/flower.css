@@ -1,0 +1,31 @@
+B {
+	font-weight : bolder;
+	color : #144BAB;
+}
+
+H1 {
+ font-family : 楷体_GB2312, 行楷, 行书体;
+	color : #B800B9;
+	margin-bottom : 30pt;
+	margin-top : 30pt;
+	font-size : 28pt;
+	}
+
+
+BODY {
+	margin-left : 140px;
+	font-family : 宋体,幼圆, 宋体 ;
+	font-size : 16pt;
+	line-height : 20pt;
+	margin-top : 20pt;
+	margin-right : 40pt;
+	background : #FFFFE0 url(Gardenbg.gif) repeat-y left;
+	color : #004F01;
+}
+
+HR {
+	height : 1.2pt;
+	border : none;
+	color : #Df70D6;
+	}
+

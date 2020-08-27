@@ -1,0 +1,46 @@
+B {
+	font-weight : bolder;
+	color : #8B4513;
+}
+DIV {
+	margin-left : 30px;
+	margin-right : 20%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	background : url(bg0465.JPG) repeat-y;
+	padding : 10px 10px 10px 40px;
+	line-height : 24px;
+}
+
+H1 {
+ font-family : 楷体_GB2312, 行楷, 行书体;
+	color : #730000;
+	margin-top : 30px;
+	margin-bottom : 30px;
+	margin-right:10%;
+	background-image : url(tile06.jpg);
+	background-repeat : repeat;
+	padding : 10px 20px 12px;
+	border : thin #FFF8DC;
+	border-bottom-style : inherit;
+	border-style : solid;
+}
+
+
+BODY {
+	background : #F0F8FF url(bg0383.JPG) left;
+	margin-left : 40px;
+	font-family : 宋体,幼圆, 宋体 ;
+	font-size : 16px;
+	line-height : 20px;
+	margin-top : 20px;
+	margin-right : 40px;
+	color : Navy;
+}
+
+HR {
+	height : 2pt;
+	color : #0000CD;
+	visibility : hidden;
+	}
+

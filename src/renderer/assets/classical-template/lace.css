@@ -1,0 +1,33 @@
+B {
+	font-weight : bolder;
+	color : #FAF0E6;
+	font-size-adjust : 1;
+}
+
+H1 {
+    font-family : 楷体_GB2312, 行楷, 行书体;
+	color : #006400;
+	margin-bottom : 20px;
+	margin-top : 20px;
+	margin-right:20%;
+	background : #E0FFFF url(tile24.jpg);
+	padding : 4px 20px;
+	border : thin solid #2E8B57;
+	}
+
+
+BODY {
+	margin-left : 160px;
+	font-family : 宋体,幼圆, 宋体 ;
+	line-height : 18pt;
+	margin-top : 20px;
+	margin-right : 40px;
+	background : #E6E6FA url(lace06.jpg) repeat-y left;
+	color : #E6E6FA;
+}
+
+HR {
+	height : 1pt;
+	color : #FFFACD;
+	}
+
