@@ -28,6 +28,7 @@ import Feature from "./feature.vue";
 import SearchMeal from "./search-meal.vue";
 import SearchFood from "./search-food.vue";
 import MealToday from "./today.vue";
+import { mapActions } from "vuex";
 
 export default {
     components: {
@@ -39,7 +40,7 @@ export default {
     },
     data() {
         return {
-            isOpen: 0,
+            isOpen: -1,
             collapses: [
                 {
                     title: "分組顯示",
@@ -65,8 +66,22 @@ export default {
         };
     },
     methods: {
-        emit_from_card(input = { src_component: "", src_api: "" }) {
-            console.log(input);
+        ...mapActions("RecipeFlag", [
+            "SET_sorted_type",
+            "SET_sorted_tag",
+        ]),
+        emit_from_card(input = { component: "", data: "" }) {
+            switch (input.component) {
+            case "Group":
+                this.group_action(input.data);
+                break;
+            default:
+                break;
+            }
+        },
+        group_action(input = "") {
+            this.SET_sorted_type("Group");
+            this.SET_sorted_tag(input);
         }
     },
 };

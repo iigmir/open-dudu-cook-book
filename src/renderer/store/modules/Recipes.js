@@ -8,12 +8,26 @@ const state = {
     default_theme,
 };
 
+const getters = {
+    default_list_getter(state) {
+        return state.default_list.book.record;
+    },
+    default_src_getter(state) {
+        return state.default_src.allsource.record;
+    },
+    default_theme_getter(state) {
+        return state.default_theme.alltheme.record;
+    }
+};
+
 const mutations = {};
 
 const actions = {};
 
 export default {
+    namespaced: true,
     state,
+    getters,
     mutations,
     actions
 };
