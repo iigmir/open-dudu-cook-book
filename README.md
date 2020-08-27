@@ -1,8 +1,16 @@
-# open-dudu2
+# open-dudu-cook-book
 
-> An electron-vue project
+An electron-vue project that clones an abandonware called DuduCookBook.
 
-#### Build Setup
+## What is DuduCookBook
+
+[Dudusoft](http://www.dudusoft.com/)(嘟嘟軟件, [Archive](https://web.archive.org/web/20090417062143/http://www.dudusoft.com/)) was an software company that developed a cookbook software called DuduCookBook(嘟嘟美食菜谱).
+
+One day, I found DuduCookBook in my computer, and later found that it's website has been closed almost ten years. But there's an interesting thing for me: The software's recipe is rendered by HTML. Also, I dumped some XML files from it. Then I thaught: "How about render and modify them by morden technology?"
+
+So... Here it is.
+
+## Build Setup
 
 ``` bash
 # install dependencies

@@ -1,9 +1,9 @@
 {
-  "name": "open-dudu2",
+  "name": "open-dudu-cook-book",
   "version": "0.0.1",
   "author": "iigmir <roc120j@gmail.com>",
-  "description": "An electron-vue project",
-  "license": null,
+  "description": "An electron-vue project that clones an abandonware called DuduCookBook.",
+  "license": "MIT",
   "main": "./dist/electron/main.js",
   "scripts": {
     "build": "node .electron-vue/build.js && electron-builder",
@@ -22,7 +22,7 @@
     "postinstall": "npm run lint:fix"
   },
   "build": {
-    "productName": "open-dudu2",
+    "productName": "open-dudu-cook-book",
     "appId": "com.example.yourapp",
     "directories": {
       "output": "build"
