@@ -42,13 +42,16 @@ export default {
             return [];
         },
         final_list() {
-            return [{
-                name: "X",
-                child: ["4,1","1,1","1"]
-            },{
-                name: "Y",
-                child: ["4,1,1","1,1"]
-            }];
+            switch (this.sorted_type_getter) {
+            case "Group":
+                return this.group_final_list;
+            default:
+                return [
+                    { name: "X", child: ["4,1","1,1","1"] },
+                    { name: "Y", child: ["4,1,1","1,1"] }
+                ];
+            }
+            
         }
     }
 };
