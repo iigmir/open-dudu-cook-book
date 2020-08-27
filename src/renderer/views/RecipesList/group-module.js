@@ -16,13 +16,15 @@ export default {
             if( this.type_is_not_group ) {
                 return [];
             }
-            const array = this.default_list_getter
-                .map( it => it[this.sorted_tag_getter] )
-                .filter( x => x.length > 0 );
-            const unique_set = new Set(array);
+            const { default_list_getter, sorted_tag_getter, other_label } = this;
+            const unique_set = new Set(
+                default_list_getter
+                    .map( it => it[sorted_tag_getter] )
+                    .filter( txt => txt.length > 0 )
+            );
             const result = [...unique_set];
-            if( !result.some(txt=>txt===this.other_label) ) {
-                result.push(this.other_label);
+            if( !result.some( txt => txt === other_label ) ) {
+                result.push(other_label);
             }
             return result;
         },
@@ -33,9 +35,10 @@ export default {
             }
             const { default_list_getter, group_labels_from_module, other_label } = this;
             const tag = this.sorted_tag_getter;
-            const named_labels = group_labels_from_module.filter( it => it !== this.other_label );
             const no_group_children = default_list_getter.filter( the =>
-                named_labels.some( label => the[tag] === label ) === false
+                group_labels_from_module
+                    .filter( it => it !== this.other_label )
+                    .some( label => the[tag] !== label )
             );
             group_labels_from_module.forEach( name => {
                 result[ name ] = default_list_getter.filter( it => it[tag] === name );
@@ -46,7 +49,10 @@ export default {
             return result;
         },
         group_final_list() {
-            return this.type_is_not_group ? [] : this.group_labels_from_module.map(
+            if( this.type_is_not_group ) {
+                return [];
+            }
+            return this.group_labels_from_module.map(
                 name => ({ name, child: this.group_children_list_from_module[name] })
             );
         }
