@@ -16,10 +16,16 @@
 
 <script>
 import emits from "./child-emits.js";
+import {  mapState } from "vuex";
 
 export default {
     name: "Feature",
-    mixins: [ emits ]
+    mixins: [ emits ],
+    computed: {
+        ... mapState({
+            themes: state => state.Recipes.default_theme
+        })
+    }
 };
 </script>
 
